@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="94n-vh-9jH">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="Lnn-wf-r2F">
+            <objects>
+                <viewController id="94n-vh-9jH" customClass="ViewController" customModule="HorizontalCollectionViewLayout" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0Qs-kK-569">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="dxj-s6-hQx">
+                                <rect key="frame" x="0.0" y="243.5" width="375" height="200"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="375" id="PZv-2v-mns"/>
+                                    <constraint firstAttribute="height" constant="200" id="opU-b7-Top"/>
+                                </constraints>
+                                <collectionViewLayout key="collectionViewLayout" id="amJ-J2-Utt" customClass="HorizontalCollectionViewLayout" customModule="HorizontalCollectionViewLayout" customModuleProvider="target"/>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SimpleCell" id="Oqx-Pv-n8F" customClass="SimpleCell" customModule="HorizontalCollectionViewLayout" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ehq-aP-rkf">
+                                                    <rect key="frame" x="5" y="5" width="40" height="40"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="Ehq-aP-rkf" firstAttribute="leading" secondItem="Oqx-Pv-n8F" secondAttribute="leading" constant="5" id="7qH-TG-yKs"/>
+                                            <constraint firstItem="Ehq-aP-rkf" firstAttribute="top" secondItem="Oqx-Pv-n8F" secondAttribute="top" constant="5" id="K8u-2p-8pU"/>
+                                            <constraint firstAttribute="trailing" secondItem="Ehq-aP-rkf" secondAttribute="trailing" constant="5" id="Zjy-he-Hzs"/>
+                                            <constraint firstAttribute="bottom" secondItem="Ehq-aP-rkf" secondAttribute="bottom" constant="5" id="g9X-Q1-F7U"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="label" destination="Ehq-aP-rkf" id="unW-xj-KAg"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qLP-DJ-JFl">
+                                <rect key="frame" x="20" y="607" width="335" height="40"/>
+                                <color key="backgroundColor" red="0.92549019610000005" green="0.43921568630000002" blue="0.1176470588" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="RK9-yy-JeV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <state key="normal" title="Random count">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="button_RandomCount_Clicked:" destination="94n-vh-9jH" eventType="touchUpInside" id="MT0-Hx-0JE"/>
+                                </connections>
+                            </button>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="LXO-ob-rbD">
+                                <rect key="frame" x="0.0" y="444" width="375" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="37" id="LpD-Xz-JsC"/>
+                                </constraints>
+                                <color key="pageIndicatorTintColor" red="0.99215686270000003" green="0.68235294120000001" blue="0.21960784310000001" alpha="0.53001210389999998" colorSpace="calibratedRGB"/>
+                                <color key="currentPageIndicatorTintColor" red="0.92549019610000005" green="0.43921568630000002" blue="0.1176470588" alpha="1" colorSpace="calibratedRGB"/>
+                            </pageControl>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Y1H-aK-QcG" firstAttribute="bottom" secondItem="qLP-DJ-JFl" secondAttribute="bottom" constant="20" id="4bO-3M-SIq"/>
+                            <constraint firstItem="LXO-ob-rbD" firstAttribute="leading" secondItem="Y1H-aK-QcG" secondAttribute="leading" id="9py-PH-3lT"/>
+                            <constraint firstItem="Y1H-aK-QcG" firstAttribute="trailing" secondItem="qLP-DJ-JFl" secondAttribute="trailing" constant="20" id="YSG-ju-fpj"/>
+                            <constraint firstItem="dxj-s6-hQx" firstAttribute="leading" secondItem="Y1H-aK-QcG" secondAttribute="leading" id="aNe-K6-LMI"/>
+                            <constraint firstItem="Y1H-aK-QcG" firstAttribute="trailing" secondItem="LXO-ob-rbD" secondAttribute="trailing" id="bxO-XO-Y7W"/>
+                            <constraint firstItem="dxj-s6-hQx" firstAttribute="centerY" secondItem="Y1H-aK-QcG" secondAttribute="centerY" id="gE2-29-wPy"/>
+                            <constraint firstItem="qLP-DJ-JFl" firstAttribute="leading" secondItem="Y1H-aK-QcG" secondAttribute="leading" constant="20" id="qpp-g7-Uue"/>
+                            <constraint firstItem="LXO-ob-rbD" firstAttribute="top" secondItem="dxj-s6-hQx" secondAttribute="bottom" constant="0.5" id="vMr-3t-XCk"/>
+                            <constraint firstItem="dxj-s6-hQx" firstAttribute="trailing" secondItem="Y1H-aK-QcG" secondAttribute="trailing" id="x1z-fe-8XR"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Y1H-aK-QcG"/>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="dxj-s6-hQx" id="5ml-ZK-Q5K"/>
+                        <outlet property="pageControl" destination="LXO-ob-rbD" id="pxd-qV-8mX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y4d-OM-oC1" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+</document>
